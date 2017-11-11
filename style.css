@@ -1,0 +1,79 @@
+*{
+    box-sizing:border-box;
+}
+
+.search, .wanted, .score{
+float:left;
+padding:5px;
+width:250px;
+height:250px;
+
+}
+body
+{
+    background-color:#7E8F7C;
+    height:250px;
+}
+#into, #from{
+    height: 50px;
+    padding:10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#into{
+    border-bottom: 1px solid;
+
+}
+#from{
+    border-top:1px solid;
+}
+a{
+    width:40px;
+}
+#wanted, #current{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+#wanted{
+    padding-top:53px;
+}
+#current{
+    margin-top:3px;
+}
+#gamearea .text{
+    text-align: center;
+    vertical-align: middle;
+    height:40px;;
+}
+#gamearea::after{
+    content: "";
+    display:block;
+    clear:both;
+}
+.spoiler{
+    display: flex;
+    width:600px;
+    justify-content: space-evenly;
+    display:none;
+}
+.button{
+    display:none;
+}
+label{
+    display:block;
+    width:80px;
+    height:1.5em;
+    margin-bottom:5px;
+    
+}
+label::after{
+    content:"Show Hint";
+
+}
+.button:checked + label::after{
+  content:"Hide";
+}
+.button:checked ~ .spoiler{
+    display:block;
+}
